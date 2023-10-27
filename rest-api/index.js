@@ -11,24 +11,18 @@ app.use(express.json())
 app.set('views', path.join(__dirname, '/views'))
 app.set('view engine', 'ejs')
 
-const comments = [
-    {
-        name: 'Haris',
-        comment: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum.'
-    },
-    {
-        name: 'Rizky',
-        comment: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum.'
-    },
-    {
-        name: 'Rizal',
-        comment: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum.'
-    }
-]
+const comments = [{
+    name: 'Haris', comment: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum.'
+}, {
+    name: 'Rizky', comment: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum.'
+}, {
+    name: 'Rizal', comment: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum.'
+}]
 
 app.get('/comments', (req, res) => {
-res.render('comments/index', {comments})
+    res.render('comments/index', {comments})
 })
+
 
 app.get('/order', (req, res) => {
     res.send('GET request')
