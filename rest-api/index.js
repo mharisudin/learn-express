@@ -23,7 +23,6 @@ app.get('/comments', (req, res) => {
     res.render('comments/index', {comments})
 })
 
-
 app.get('/order', (req, res) => {
     res.send('GET request')
 })
