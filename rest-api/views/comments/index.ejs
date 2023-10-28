@@ -17,7 +17,11 @@
                     <div class="card-body">
                         <h5 class="card-title"><%= comment.name %></h5>
                         <p class="card-text"><%= comment.text %></p>
-                        <a href="#" class="btn btn-primary">Go somewhere</a>
+                        <a href="/comments/<%= comment.id %>" class="btn btn-primary">Detail</a>
+                        <a href="/comments/<%= comment.id %>/edit" class="btn btn-secondary">Edit</a>
+                        <form method="POST" action="/comments/<%= comment.id %>?_method=DELETE">
+                            <button type="submit" class="btn btn-warning">Delete</button>
+                        </form>
                     </div>
                 </div>
             <% } %>
